@@ -1,0 +1,55 @@
+/*
+ * تعریف وزن‌های مختلف فونت استعداد (Estedad)
+ * بر اساس فایل‌های предоставленный شما.
+*/
+
+/* وزن خیلی نازک (Thin) */
+@font-face {
+    font-family: 'Estedad';
+    font-style: normal;
+    font-weight: 100; /* Thin */
+    src: url('../fonts/Estedad-Thin.woff2') format('woff2');
+    font-display: swap;
+}
+
+/* وزن سبک (Light) */
+@font-face {
+    font-family: 'Estedad';
+    font-style: normal;
+    font-weight: 300; /* Light */
+    src: url('../fonts/Estedad-Light.woff2') format('woff2');
+    font-display: swap;
+}
+
+/* وزن معمولی (Regular) */
+@font-face {
+    font-family: 'Estedad';
+    font-style: normal;
+    font-weight: 400; /* Regular */
+    src: url('../fonts/Estedad-Regular.woff2') format('woff2');
+    font-display: swap;
+}
+
+/* وزن سنگین (Black) */
+@font-face {
+    font-family: 'Estedad';
+    font-style: normal;
+    font-weight: 900; /* Black */
+    src: url('../fonts/Estedad-Black.woff2') format('woff2');
+    font-display: swap;
+}
+
+/* * اعمال فونت استعداد به تمام بخش‌های پیشخوان و صفحه ورود
+*/
+body, #wpadminbar, .wp-admin, .login,
+h1, h2, h3, h4, h5, h6, p, a, span, div,
+input, button, textarea, select, label, .button {
+    font-family: 'Estedad', sans-serif !important;
+}
+
+/* استثنا کردن آیکون‌ها تا فونتشان خراب نشود */
+.dashicons, .dashicons-before:before, .ab-icon:before {
+    font-family: dashicons !important;
+}
+
+/* // amir-naseri.ir */

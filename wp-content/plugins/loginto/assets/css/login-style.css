@@ -1,0 +1,142 @@
+:root  {
+    --var-loginto-color-main: #8b70cd !important;
+}
+
+#login {
+    background: white;
+    padding: 30px 25px !important;
+    min-width: 400px !important;
+    border-radius: 25px !important;
+    height: fit-content !important;
+}
+#loginform, #registerform, #lostpasswordform {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 5px;
+}
+#loginform, #registerform, #lostpasswordform, #nav, #backtoblog {
+    max-width: 350px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+#backtoblog {
+    margin-bottom: 0;
+}
+
+#wp-submit:hover, .wp-core-ui .button-primary:focus, .wp-core-ui .button-primary.active, .wp-core-ui .button-primary.active:focus, .wp-core-ui .button-primary:active {
+    background-color: white;
+    color: var(--var-loginto-color-main);
+    box-shadow: none !important;
+}
+.forgetmenot {
+    margin: 14px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login #login_error, .login .message, .login .success {
+    border: 3px solid #46bdd9;
+    padding: 12px;
+    margin-right: 0;
+    margin-bottom: 1px !important;
+    background-color: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    word-wrap: break-word;
+    border-radius: 12px !important;
+    margin-top: 5px !important;
+}
+body.login {
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    float: right;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+ }
+.wp-core-ui .button, .wp-core-ui .button-secondary .dashicons:before {
+    color: var(--var-loginto-color-main);
+}
+.wp-core-ui .button-primary {
+    background: var(--var-loginto-color-main);
+    color: #FFFFFF;
+}
+.login form input[type="checkbox"]::before{
+    background: #fff;
+}
+
+#rememberme {
+    border: 1px solid #81818154 !important;
+    box-shadow: none !important;
+}
+
+/* === START: کدهای سفارشی شما جایگزین قوانین قبلی شدند === */
+
+.language-switcher {
+    display: none !important;
+}
+button.button.button-secondary.wp-hide-pw.hide-if-no-js {
+    margin-top: 2px !important;
+    margin-left: 2px !important;
+    color: #000000 !important;
+}
+.login form .input, .login input[type="text"], .login input[type="password"] {
+ border-radius: 12px !important;
+    border: none !important;
+    box-shadow: 0px 2px 20px -12px #0000005e !important;
+    margin-top: 2px !important;
+}
+#wp-submit {
+    width: 27% !important;
+    border-radius: 10px !important;
+    background: var(--var-loginto-color-main) !important; 
+    border: none !important;
+    height: 42px !important;
+    text-shadow: none !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    transition: all 0.2s ease-in-out !important;
+    margin-top:7px ;
+}
+.login h1 a {
+    width: 225px !important;
+    height: 120px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    margin-bottom: -31px !important;
+    margin-top: -2px !important;
+}
+form#loginform {
+    box-shadow: 0 0 0 0 !important;
+    border: none !important;
+}
+p#backtoblog {
+    display: none !important;
+}
+.login form {
+    margin: 0px !important;
+    padding: 25px 24px !important;
+    font-weight: 400;
+    overflow: hidden;
+    background: #fff;
+}
+.login #nav {
+    margin: 0px !important;
+    padding: 0px !important;
+    display: flex
+;
+    justify-content: center;
+    margin-right: 30px !important;
+        margin-top: -6px !important;
+}
+
+.user-pass-wrap {
+    margin-top: 3px !important;
+}
+p.captcha-wrapper {
+    margin-top: 4px !important;
+}
+/* === END: کدهای سفارشی شما === */

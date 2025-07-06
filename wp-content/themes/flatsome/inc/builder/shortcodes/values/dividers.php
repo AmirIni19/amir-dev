@@ -1,0 +1,25 @@
+<?php
+
+return array(
+	''                 => 'هیچکدام',
+	'arrow'            => 'پیکان',
+	'arrow-invert'     => 'پیکان - برعکس',
+	'arrow-2'          => 'پیکان 2',
+	'arrow-2-invert'   => 'پیکان 2 - برعکس',
+	'book'             => 'کتاب',
+	'book-invert'      => 'کتاب - برعکس',
+	'curve'            => 'منحنی',
+	'curve-invert'     => 'منحنی - برعکس',
+	'curve-2'          => 'منحنی 2',
+	'curve-2-invert'   => 'منحنی 2 - برعکس',
+	'curve-opacity'    => 'منحنی شفاف',
+	'fan'              => 'جلد',
+	'tilt'             => 'کاشی',
+	'triangle'         => 'مثلت',
+	'triangle-invert'  => 'مثلث - برعکس',
+	'triangle-opacity' => 'برعکس شفاف',
+	'waves'            => 'موج',
+	'waves-opacity'    => 'موج شفاف ',
+	'waves-opacity-2'  => 'موج شفاف 2',
+	'waves-opacity-3'  => 'موج شفاف 3',
+);
