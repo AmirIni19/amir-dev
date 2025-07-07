@@ -1,29 +1,26 @@
 <?php
 
 /**
- * The plugin bootstrap file
+ * استوری وردپرس
  *
- * This file is read by WordPress to generate the plugin information in the plugin
- * admin area. This file also includes all of the dependencies used by the plugin,
- * registers the activation and deactivation functions, and defines a function
- * that starts the plugin.
+ * به راحتی می توانید استوری های وردپرسی خودتون رو اضافه کنید و لذت ببرید
  *
- * @link              https://wpuzman.com
+ * @link              https://weboto.ir
  * @since             1.0.0
  * @package           Wp_Story
  *
  * @wordpress-plugin
  * Plugin Name:       WP Story
- * Plugin URI:        https://codecanyon.net/user/wpuzman/
- * Description:       Create your own simple stories.
- * Version:           2.1.2
- * Author:            wpuzman
- * Author URI:        https://codecanyon.net/user/wpuzman/
+ * Plugin URI:        https://weboto.ir
+ * Description:       به راحتی می توانید استوری های وردپرسی خودتون رو اضافه کنید و لذت ببرید
+ * Version:           1.0
+ * Author:            webuto
+ * Author URI:        https://weboto.ir
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       wp-story
  * Domain Path:       /languages
- * Tested up to:      5.6.2
+ * Tested up to:      1.0
  */
 
 // If this file is called directly, abort.

@@ -412,6 +412,11 @@ function mip_output_assets()
                 }
             }
         </style>
+
+
+
+
+
         <script>
             jQuery(document).ready(function($) {
                 const body = $('body');

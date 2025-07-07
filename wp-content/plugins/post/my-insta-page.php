@@ -1,20 +1,50 @@
 <?php
 
 /**
- * Plugin Name: My Insta Page
- * Description: A professional Instagram-like page with a robust WooCommerce-style gallery metabox and a working frontend slider.
- * Version: 7.1
- * Author: Webuto (Enhanced by AI)
+ * Plugin Name: My Profile Page
+ * Description: پروفایل شبکه اجتماعی
+ * Version: 1.0
+ * Author: Webuto 
  */
 
 if (!defined('ABSPATH'))
     exit;
 
-// Create custom post type 'insta_post'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// **************************  start our panel of in conter wp **************************
+
+// Create custom post type 'insta_post' ************************************************
 function mip_create_post_type()
 {
     register_post_type('insta_post', [
-        'labels' => ['name' => __('پست‌های اینستا'), 'singular_name' => __('پست اینستا'), 'add_new' => __('افزودن پست جدید')],
+        'labels' => ['name' => __('پست‌های شبکه اجتماعی'), 'singular_name' => __('پست شبکه اجتماعی'), 'add_new' => __('افزودن پست جدید')],
         'public' => true,
         'has_archive' => true,
         'menu_icon' => 'dashicons-camera',
@@ -26,7 +56,7 @@ add_action('init', 'mip_create_post_type');
 // Add admin menu for profile settings
 function mip_add_admin_menu()
 {
-    add_menu_page('تنظیمات پروفایل اینستا', 'تنظیمات پروفایل', 'manage_options', 'my_insta_page_settings', 'mip_settings_page_html', 'dashicons-admin-users', 25);
+    add_menu_page('تنظیمات پروفایل شبکه اجتماعی', 'تنظیمات پروفایل', 'manage_options', 'my_insta_page_settings', 'mip_settings_page_html', 'dashicons-admin-users', 25);
 }
 add_action('admin_menu', 'mip_add_admin_menu');
 
@@ -51,7 +81,7 @@ function mip_settings_page_html()
             <?php settings_fields('mip_settings_group'); ?>
             <table class="form-table">
                 <tr>
-                    <th><label for="mip_profile_name">نام پروفایل</label></th>
+                    <th><label for="mip_profile_name">نام پروفایل کاربری</label></th>
                     <td><input type="text" id="mip_profile_name" name="mip_profile_name"
                             value="<?php echo esc_attr(get_option('mip_profile_name')); ?>" class="regular-text" /></td>
                 </tr>
@@ -79,7 +109,10 @@ function mip_settings_page_html()
 <?php
 }
 
+
+
 // Add gallery meta box
+// When we want to add new post in the our site , it is here 
 function mip_add_gallery_meta_box()
 {
     add_meta_box('mip_gallery_meta_box', 'گالری پست (اسلایدر)', 'mip_gallery_meta_box_html', 'insta_post', 'normal', 'high');
@@ -130,6 +163,49 @@ function mip_save_gallery_meta_box_data($post_id)
 }
 add_action('save_post_insta_post', 'mip_save_gallery_meta_box_data');
 
+// **************************  end of our panel of in conter wp **************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // **************************  start our frontend page **************************
 // Shortcode for frontend display
 function mip_display_shortcode_slider()
 {
@@ -142,6 +218,8 @@ function mip_display_shortcode_slider()
 
     ob_start();
 ?>
+
+
     <div class="mip-container">
         <header class="mip-profile">
             <div class="mip-profile-image"><img src="<?php echo esc_url($profile_picture_url); ?>" alt="Profile Picture">
@@ -166,7 +244,14 @@ function mip_display_shortcode_slider()
 
         <main class="mip-posts-grid">
             <?php
-            $query = new WP_Query(['post_type' => 'insta_post', 'posts_per_page' => -1, 'orderby' => 'date', 'order' => 'DESC']);
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            $query = new WP_Query([
+                'post_type'      => 'insta_post',
+                'posts_per_page' => 12, // نمایش ۱۲ پست در هر صفحه
+                'paged'          => $paged,
+                'orderby'        => 'date',
+                'order'          => 'DESC'
+            ]);
             if ($query->have_posts()):
                 while ($query->have_posts()):
                     $query->the_post();
@@ -210,13 +295,18 @@ function mip_display_shortcode_slider()
         <div class="mip-modal-content">
             <div class="mip-modal-slider">
                 <div class="mip-slider-container"></div>
-                <button class="mip-slider-nav prev">
+
+                <!-- <button class="mip-slider-nav prev">
                     >
                 </button>
                     
-                    <button class="mip-slider-nav next">
+                <button class="mip-slider-nav next">
                         <
-                        </button>
+                </button> -->
+
+                <button class="mip-slider-nav next" aria-label="Next slide">&lt;</button>
+                <button class="mip-slider-nav prev" aria-label="Previous slide">&gt;</button>
+
             </div>
             <div class="mip-modal-info"></div>
         </div>
@@ -225,6 +315,36 @@ function mip_display_shortcode_slider()
     return ob_get_clean();
 }
 add_shortcode('my_insta_page', 'mip_display_shortcode_slider');
+// // **************************  end of our frontend page **************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Include asset files
 require_once plugin_dir_path(__FILE__) . 'admin-assets.php';

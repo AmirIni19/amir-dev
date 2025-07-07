@@ -22,7 +22,8 @@ function mip_like_post() {
                 $likes = max(0, $likes - 1);
                 update_post_meta($post_id, '_mip_likes', $likes);
                 $liked_posts = array_diff($liked_posts, [$post_id]);
-                update_user_meta($user_id, '_mip_liked_posts', implode(',', $liked_posts));
+                update_user_meta($user_id, 
+                '_mip_liked_posts', implode(',', $liked_posts));
             }
         } else {
             if (!in_array($post_id, $liked_posts)) {
